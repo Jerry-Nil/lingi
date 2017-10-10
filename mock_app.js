@@ -9,6 +9,14 @@ const fs = require('fs');
 const config = require('./config/index');
 let app = express();
 
+app.post('/api', (req, res) => {
+	let ret = {
+		code: '0',
+		msg: 'get data success',
+		data: [],
+	};
+	res.json(ret);
+});
 
 app.get('/', (req, res) => {
 	fs.readFile('./view/index.html', 'utf-8', (err, data) => {
@@ -19,15 +27,6 @@ app.get('/', (req, res) => {
 		}
 		res.send(data);
 	});
-});
-
-app.post('/api', (req, res) => {
-	let ret = {
-		code: '0',
-		msg: 'get data success',
-		data: [],
-	};
-	res.json(ret);
 });
 
 app.listen(config.port);
