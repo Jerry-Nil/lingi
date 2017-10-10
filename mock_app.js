@@ -17,8 +17,17 @@ app.get('/', (req, res) => {
 			console.log(err);
 			return;
 		}
-		res.send(data.replace('{{ip}}', req.ip));
+		res.send(data);
 	});
+});
+
+app.post('/api', (req, res) => {
+	let ret = {
+		code: '0',
+		msg: 'get data success',
+		data: [],
+	};
+	res.json(ret);
 });
 
 app.listen(config.port);
