@@ -6,6 +6,7 @@
 		"email": "superzcj_001@163.com"
 	},
 	"scripts": {
+		"dev": "node mock_app",
 		"start": "pm2 start mock_app.js --watch src",
 		"restart": "pm2 restart mock_app",
 		"stop": "pm2 delete mock_app"
