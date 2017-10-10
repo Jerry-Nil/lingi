@@ -1,1 +1,1 @@
-# mock 服务器
+# Lingi - A simple Mock Server
