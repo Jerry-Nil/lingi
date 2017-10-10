@@ -1,0 +1,18 @@
+{
+	"name": "mock-server",
+	"version": "0.1.0",
+	"author": {
+		"name": "Jerry",
+		"email": "superzcj_001@163.com"
+	},
+	"scripts": {
+		"start": "pm2 start mock_app.js --watch src",
+		"restart": "pm2 restart mock_app",
+		"stop": "pm2 delete mock_app"
+	},
+	"dependencies": {
+		"express": "^4.16.2",
+		"mockjs": "^1.0.1-beta3"
+	},
+	"license": "MIT"
+}

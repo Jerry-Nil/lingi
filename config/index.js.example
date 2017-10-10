@@ -1,0 +1,9 @@
+/**
+ * 配置
+ * @type {Object}
+ */
+/* jshint node: true, esversion: 6 */
+
+module.exports = {
+	port: 8000,
+};
