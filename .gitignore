@@ -1,0 +1,13 @@
+# system files
+.DS_Store
+
+# IDE/editor
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# node
+node_modules/
+
+# config
+config/index.js
