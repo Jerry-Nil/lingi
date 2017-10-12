@@ -40,6 +40,17 @@ app.get('/404.html', (req, res) => {
 	});
 });
 
+app.get('*', (req, res) => {
+	fs.readFile('./view/404.html', 'utf-8', (err, data) => {
+		if(err){
+			res.send('<h1>Server Down</h1>');
+			console.log(err);
+			return;
+		}
+		res.send(data);
+	});
+});
+
 app.listen(config.port);
 
 console.log('> Listen at 0.0.0.0:' + config.port);
