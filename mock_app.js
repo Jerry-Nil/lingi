@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 	});
 });
 
-app.get('/404', (req, res) => {
+app.get('/404.html', (req, res) => {
 	fs.readFile('./view/404.html', 'utf-8', (err, data) => {
 		if(err){
 			res.send('<h1>Server Down</h1>');
